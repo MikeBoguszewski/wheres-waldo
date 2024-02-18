@@ -2,6 +2,7 @@ require("dotenv").config();
 const cors = require("cors");
 const asyncHandler = require("express-async-handler");
 const express = require("express");
+const createError = require("http-errors");
 const mongoose = require("mongoose");
 const Character = require("./models/character");
 const Score = require("./models/score");
