@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get(
-  "/levels/:level",
+  "/api/levels/:level",
   asyncHandler(async (req, res, next) => {
     const level = await Character.find({ level: req.params.level });
     res.json(level);
@@ -30,7 +30,7 @@ app.get(
 );
 
 app.get(
-  "/scores/:level",
+  "/api/scores/:level",
   asyncHandler(async (req, res, next) => {
     const scores = await Score.find({ level: req.params.level });
     res.json(scores);
@@ -38,7 +38,7 @@ app.get(
 );
 
 app.post(
-  "/scores/:level",
+  "/api/scores/:level",
   asyncHandler(async (req, res, next) => {
     try {
       const result = await Score.updateOne({ level: req.params.level }, { $push: { scores: {name: req.body.name, time: req.body.time} } });
