@@ -6,7 +6,7 @@ const createError = require("http-errors");
 const mongoose = require("mongoose");
 const Character = require("./models/character");
 const Score = require("./models/score");
-
+const path = require("path")
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -18,6 +18,8 @@ async function main() {
 }
 app.use(express.json());
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get(
   "/levels/:level",
@@ -47,6 +49,11 @@ app.post(
     }
   })
 );
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+});
+
 
 app.use(function (req, res, next) {
   next(createError(404));
