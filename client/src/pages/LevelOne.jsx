@@ -16,7 +16,7 @@ export default function LevelOne() {
   useEffect(() => {
     const fetchPositions = async () => {
       try {
-        const response = await fetch("https://wheres-waldo-8za6.onrender.com/levels/1");
+        const response = await fetch("https://wheres-waldo-8za6.onrender.com/api/levels/1");
         const data = await response.json();
         setCharacters(data);
       } catch (error) {
@@ -25,7 +25,7 @@ export default function LevelOne() {
     };
     const fetchScores = async () => {
       try {
-        const response = await fetch("https://wheres-waldo-8za6.onrender.com/scores/1");
+        const response = await fetch("https://wheres-waldo-8za6.onrender.com/api/scores/1");
         const data = await response.json();
         setScores(data);
       } catch (error) {

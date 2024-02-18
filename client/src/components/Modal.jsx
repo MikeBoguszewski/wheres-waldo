@@ -15,7 +15,7 @@ export default function Modal({ scores, time, level }) {
     }
     event.preventDefault()
     try {
-      const response = await fetch(`https://wheres-waldo-8za6.onrender.com/scores/${level}`, {
+      const response = await fetch(`https://wheres-waldo-8za6.onrender.com/api/scores/${level}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export default function Modal({ scores, time, level }) {
         }),
       });
       if (response.ok) {
-        const response = await fetch(`https://wheres-waldo-8za6.onrender.com/scores/${level}`);
+        const response = await fetch(`https://wheres-waldo-8za6.onrender.com/api/scores/${level}`);
         const data = await response.json();
         setUpdatedScores([...data]);
         setInputValue("");
