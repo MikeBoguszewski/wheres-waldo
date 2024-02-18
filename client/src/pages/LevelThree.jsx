@@ -16,7 +16,7 @@ export default function LevelThree() {
   useEffect(() => {
     const fetchPositions = async () => {
       try {
-        const response = await fetch("http://localhost:3000/levels/3");
+        const response = await fetch("https://wheres-waldo-8za6.onrender.com/levels/3");
         const data = await response.json();
         setCharacters(data);
       } catch (error) {
@@ -25,7 +25,7 @@ export default function LevelThree() {
     };
     const fetchScores = async () => {
       try {
-        const response = await fetch("http://localhost:3000/scores/3");
+        const response = await fetch("https://wheres-waldo-8za6.onrender.com/scores/3");
         const data = await response.json();
         setScores(data);
       } catch (error) {
