@@ -90,7 +90,6 @@ export default function LevelOne() {
             </div>
           )}
         </div>
-        <Link to={"/"}>Home</Link>
       </div>
       {win && <Modal scores={scores} time={time} level={1} />}
     </>

@@ -95,7 +95,6 @@ export default function LevelTwo() {
             </div>
           )}
         </div>
-        <Link to={"/"}>Home</Link>
       </div>
       {win && <Modal scores={scores} time={time} level={2} />}
     </>

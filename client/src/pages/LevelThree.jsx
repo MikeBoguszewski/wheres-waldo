@@ -98,7 +98,6 @@ export default function LevelThree() {
             </div>
           )}
         </div>
-        <Link to={"/"}>Home</Link>
       </div>
       {win && <Modal scores={scores} time={time} level={3} />}
     </>
