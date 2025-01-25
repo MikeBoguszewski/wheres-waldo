@@ -18,8 +18,8 @@ This project is a photo-tagging game inspired by the popular "Where's Waldo" ser
 ![App Screenshot](./screenshot.jpg)
 
 ## Links
+- Live Demo: https://wheres-waldo-8za6.onrender.com/ (due to limited resources, the server may take up to a minute to start up)
 - GitHub Repository: https://github.com/MikeBoguszewski/wheres-waldo
-- Live Demo: https://wheres-waldo-8za6.onrender.com/
 
 ---
 
@@ -31,6 +31,7 @@ This project is a photo-tagging game inspired by the popular "Where's Waldo" ser
 - **Node.js** and **Express** - Backend setup to manage API requests and responses. The **client** and **API** are both within the same repository.
 
 ## What I Learned
+I learned how to build a full stack application utilizing both the server and the client.
 This project taught me:
 - How to use **MongoDB** to manage and query spatial data for the game.
 - Building backend APIs with **Node.js** and integrating them with a frontend.
